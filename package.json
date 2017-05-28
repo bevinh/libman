@@ -1,0 +1,27 @@
+{
+  "name": "library-manager-v1",
+  "version": "1.0.0",
+  "description": "Library Manager App in Node, Express, Pug and Sequelize",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.15.3",
+    "sequelize": "^3.30.4",
+    "sequelize-cli": "^2.7.0",
+    "sqlite3": "^3.1.8"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bevinh/libman.git"
+  },
+  "author": "Bevin Hernandez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bevinh/libman/issues"
+  },
+  "homepage": "https://github.com/bevinh/libman#readme"
+}
