@@ -1,0 +1,23 @@
+html
+    head
+        title New Book
+        link(rel='stylesheet', href="/static/stylesheets/style.css", type='text/css')
+    body
+        //TODO: Fix Menu Routes
+        include ./partials/_nav.pug
+        h1 Book: A Brief History of Time
+        form
+            p
+                label.for("title") Title
+                input(id="title", type="text")
+            p
+                label.for("author") Author
+                input(id="author", type="text")
+            p
+                label.for("genre") Genre
+                input(id="genre", type="text")
+            p
+                label.for("first_published") First Published
+                input(id="first_published", type="text")
+            p
+                input(id="submit", type="submit", value="Create New Book")

@@ -1,17 +1,18 @@
 html
     head
-        title Library Manager
+        title Overdue Books
         link(rel='stylesheet', href="/static/stylesheets/style.css", type='text/css')
     body
+        //TODO: Fix Menu Routes
         include ./partials/_nav.pug
-        h1 Books
+        h1 Overdue Books
         p
-            a.button(href="../new_book") Create New Book
+            a.button(href="/new_book") Create New Book
         p Filters &nbsp;
             a(href="/all_books") All&nbsp;
-            ||
+            | |
             a(href="/overdue_books") &nbsp;Overdue&nbsp;
-            ||
+            | |
             a(href="/checked_books") &nbsp;Checked Out
         table
             thead
@@ -23,9 +24,7 @@ html
             tbody
                 tr
                     td
-                        a(href="../book_detail") Harry Potter and the Philosopher's Stone
+                        a(href="book_detail") Harry Potter and the Goblet of Fire
                     td J.K. Rowling
                     td Fantasy
-                    td 1997
-
-
+                    td 2000

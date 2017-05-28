@@ -1,13 +1,13 @@
 html
     head
-        title Library Manager
+        title Overdue Loans
         link(rel='stylesheet', href="/static/stylesheets/style.css", type='text/css')
     body
         //TODO: Fix Menu Routes
         include ./partials/_nav.pug
         h1 Loans
         p
-            a.button(href="../new_loan") Create New Loan
+            a.button(href="../new_loan.html") Create New Loan
         p Filters &nbsp;
             a(href="/all_loans") All&nbsp;
             | |
@@ -26,14 +26,11 @@ html
             tbody
                 tr
                     td
-                        a(href="/book_detail") Emma
+                        a(href="/book_detail") Harry Potter and the Goblet of Fire
                     td
-                        a(href="/patron_detail") Dave McFarland
-                    td 2015-12-10
-                    td 2020-10-20
+                        a(href="/patron_detail") Andrew Chalkley
+                    td 2015-12-11
+                    td 2015-12-18
                     td
                     td
                         a.button(href="/return_book") Return Book
-
-
-

@@ -1,0 +1,27 @@
+html
+    head
+        title New Loan
+        link(rel='stylesheet', href="/static/stylesheets/style.css", type='text/css')
+    body
+        include ./partials/_nav.pug
+        h1 New Loan
+        form
+            p
+                label(for="book") Book
+                select#book(type="select")
+                    option(value="1") Harry Potter and the Philosopher's Stone
+                    option(value="2") Harry Potter and the Chamber of Secrets
+                    option(value="3") Harry Potter and the Prisoner of Azkaban
+            p
+                label(for="patron_id") Patron
+                select#patron_id(type="select")
+                    option(value="1") Andrew Chalkley
+                    option(value="2") Dave McFarland
+            p
+                label(for="loaned_on") Loaned on:
+                input#loaned_on(type="text", value="Sun May 22 2016 17:00:00 GMT-0700 (PDT)")
+            p
+                label(for="return_by") Return by:
+                input#return_by(type="text", value="Sun May 22 2016 17:00:00 GMT-0700 (PDT)")
+            p
+                input(type="submit", value="Create New Loan")

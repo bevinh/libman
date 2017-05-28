@@ -1,13 +1,13 @@
 html
     head
-        title Library Manager
+        title Checked Out Books
         link(rel='stylesheet', href="/static/stylesheets/style.css", type='text/css')
     body
         //TODO: Fix Menu Routes
         include ./partials/_nav.pug
         h1 Loans
         p
-            a.button(href="../new_loan") Create New Loan
+            a.button(href="../new_loan.html") Create New Loan
         p Filters &nbsp;
             a(href="/all_loans") All&nbsp;
             | |
@@ -34,6 +34,4 @@ html
                     td
                     td
                         a.button(href="/return_book") Return Book
-
-
 
