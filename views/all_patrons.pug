@@ -1,0 +1,28 @@
+html
+    head
+        title Library Manager
+        link(rel='stylesheet', href="/static/stylesheets/style.css", type='text/css')
+    body
+        //TODO: Fix Menu Routes
+        include ./partials/_nav.pug
+        h1 Patrons
+        p
+            a.button(href="../new_patron.html") Create New Patron
+        table
+            thead
+                tr
+                    th Name
+                    th Address
+                    th Email
+                    th Library ID
+                    th Zip
+            tbody
+                tr
+                    td
+                        a(href="../patron_detail.html") Andrew Chalkley
+                    td 1234 NE 20st St
+                    td andrew.chalkley@teamtreehouse.com
+                    td MCL1001
+                    td 90210
+
+
