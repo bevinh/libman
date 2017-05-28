@@ -19,6 +19,14 @@ app.get('/all_loans', function(req, res){
     res.render('all_loans')
 });
 
+app.get('/book_detail', function(req, res){
+    res.render('book_detail')
+});
+
+app.get('/patron_detail', function(req, res){
+    res.render('patron_detail')
+});
+
 app.listen(3000, function () {
     console.log('Libman listening on port 3000!')
 });

@@ -1,0 +1,45 @@
+html
+    head
+        title A Brief History of Time
+        link(rel='stylesheet', href="/static/stylesheets/style.css", type='text/css')
+    body
+        //TODO: Fix Menu Routes
+        include ./partials/_nav.pug
+        h1 Book: A Brief History of Time
+        form
+            p
+                label.for("title") Title
+                input(id="title", type="text", value="A Brief History of Time")
+            p
+                label.for("author") Author
+                input(id="author", type="text", value="Stephen Hawking")
+            p
+                label.for("genre") Genre
+                input(id="genre", type="text", value="Non Fiction")
+            p
+                label.for("first_published") First Published
+                input(id="first_published", type="text", value="1988")
+        h2 Loan History
+        table
+            thead
+                tr
+                    th Book
+                    th Patron
+                    th Loaned On
+                    th Return By
+                    th Returned On
+                    th Action
+            tbody
+                tr
+                    td
+                        a(href="book_detail") A Brief History of Time
+                    td
+                        a(href="../patron_detail") Andrew Chalkley
+                    td 2015-12-12
+                    td 2015-12-19
+                    td
+                    td
+                        a.button(href="../return_book") Return Book
+
+
+
