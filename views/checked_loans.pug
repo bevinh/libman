@@ -8,12 +8,7 @@ html
         h1 Loans
         p
             a.button(href="../new_loan.html") Create New Loan
-        p Filters &nbsp;
-            a(href="/all_loans") All&nbsp;
-            | |
-            a(href="/overdue_loans") &nbsp;Overdue&nbsp;
-            | |
-            a(href="/checked_loans") &nbsp;Checked Out
+        include ./partials/_loan_nav.pug
         table
             thead
                 tr
@@ -26,12 +21,12 @@ html
             tbody
                 tr
                     td
-                        a(href="/book_detail") Emma
+                        a(href="/all_books/book_detail") Emma
                     td
-                        a(href="/patron_detail") Dave McFarland
+                        a(href="/all_patrons/patron_detail") Dave McFarland
                     td 2015-12-10
                     td 2020-10-20
                     td
                     td
-                        a.button(href="/return_book") Return Book
+                        a.button(href="/all_books/return_book") Return Book
 

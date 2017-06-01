@@ -1,5 +1,5 @@
 const express = require('express');
-var router = express.Router()
+var router = express.Router();
 var Book = require("./models").Book;
 
 router.get('/', function (req, res) {
