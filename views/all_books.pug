@@ -6,7 +6,7 @@ html
         include ./partials/_nav.pug
         h1 Books
         p
-            a.button(href="../new_book") Create New Book
+            a.button(href="/all_books/new_book") Create New Book
         include ./partials/_book_nav.pug
         table
             thead
@@ -16,11 +16,16 @@ html
                     th Genre
                     th Year Released
             tbody
+            each book in books
                 tr
                     td
-                        a(href="/all_books/book_detail") Harry Potter and the Philosopher's Stone
-                    td J.K. Rowling
-                    td Fantasy
-                    td 1997
+                        a(href="/all_books/book_detail")
+                            =book.title
+                    td
+                        =book.author
+                    td
+                        =book.genre
+                    td
+                        =book.first_published
 
 

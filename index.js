@@ -18,8 +18,4 @@ app.use('/all_patrons', patrons);
 app.use('/all_loans', loans);
 
 
-
-
-
-
 module.exports = app;

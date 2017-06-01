@@ -6,7 +6,7 @@ html
         //TODO: Fix Menu Routes
         include ./partials/_nav.pug
         h1 Book: A Brief History of Time
-        form
+        form(action="/all_books", method="post")
             p
                 label.for("title") Title
                 input(id="title", type="text")

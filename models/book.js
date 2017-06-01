@@ -9,12 +9,14 @@ module.exports = function(sequelize, DataTypes) {
     author: DataTypes.STRING,
     genre: DataTypes.STRING,
     first_published: DataTypes.INTEGER
-  }, {
+  },
+      {
     classMethods: {
       associate: function(models) {
         // associations can be defined here
       }
-    }
+    },
+    timestamps: false
   });
   return Book;
 };
