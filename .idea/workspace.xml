@@ -38,11 +38,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="book_detail.pug" pinned="false" current-in-tab="true">
+      <file leaf-file-name="book_detail.pug" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/book_detail.pug">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="82">
               <caret line="6" column="31" lean-forward="true" selection-start-line="6" selection-start-column="31" selection-end-line="6" selection-end-column="31" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_nav.pug" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/views/partials/_nav.pug">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="7" column="20" lean-forward="false" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -91,7 +101,6 @@
         <option value="$PROJECT_DIR$/views/all_books.html" />
         <option value="$PROJECT_DIR$/views/partials/_head.pug" />
         <option value="$PROJECT_DIR$/views/home.pug" />
-        <option value="$PROJECT_DIR$/views/partials/_nav.pug" />
         <option value="$PROJECT_DIR$/views/all_patrons.html" />
         <option value="$PROJECT_DIR$/views/all_loans.html" />
         <option value="$PROJECT_DIR$/views/book_detail.html" />
@@ -136,6 +145,7 @@
         <option value="$PROJECT_DIR$/views/all_books.pug" />
         <option value="$PROJECT_DIR$/book.js" />
         <option value="$PROJECT_DIR$/views/book_detail.pug" />
+        <option value="$PROJECT_DIR$/views/partials/_nav.pug" />
       </list>
     </option>
   </component>
@@ -193,6 +203,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="library-manager-v1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="library-manager-v1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="partials" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -326,12 +354,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1495923649369</updated>
-      <workItem from="1495923651168" duration="31967000" />
+      <workItem from="1495923651168" duration="32336000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31967000" />
+    <option name="totallyTimeSpent" value="32336000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -443,14 +471,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-21">
           <caret line="34" column="25" lean-forward="false" selection-start-line="34" selection-start-column="20" selection-end-line="34" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/partials/_nav.pug">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="32" lean-forward="false" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
           <folding />
         </state>
       </provider>
@@ -803,6 +823,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="82">
           <caret line="6" column="31" lean-forward="true" selection-start-line="6" selection-start-column="31" selection-end-line="6" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/partials/_nav.pug">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="20" lean-forward="false" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
           <folding />
         </state>
       </provider>
