@@ -32,8 +32,10 @@ router.get('/overdue_books', function(req, res) {
     res.render('overdue_books')
 });
 
-router.get('/book_detail', function(req, res){
-    res.render('book_detail')
+router.get('/book_detail/:id', function(req, res){
+    Book.findById(req.params.id).then(function(book){
+            res.render('book_detail', {book: book})
+    });
 });
 
 module.exports = router;

@@ -4,6 +4,7 @@
   "description": "Library Manager App in Node, Express, Pug and Sequelize",
   "main": "index.js",
   "dependencies": {
+    "body-parser": "^1.17.2",
     "express": "^4.15.3",
     "pug": "^2.0.0-rc.1",
     "sequelize": "^3.30.4",
@@ -15,7 +16,8 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node ./bin/www"
+    "start": "node ./bin/www",
+    "devstart": "nodemon ./bin/www"
   },
   "repository": {
     "type": "git",

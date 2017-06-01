@@ -9,16 +9,16 @@ html
         form
             p
                 label.for("title") Title
-                input(id="title", type="text", value="A Brief History of Time")
+                input(id="title", type="text", value=book.title)
             p
                 label.for("author") Author
-                input(id="author", type="text", value="Stephen Hawking")
+                input(id="author", type="text", value=book.author)
             p
                 label.for("genre") Genre
-                input(id="genre", type="text", value="Non Fiction")
+                input(id="genre", type="text", value=book.genre)
             p
                 label.for("first_published") First Published
-                input(id="first_published", type="text", value="1988")
+                input(id="first_published", type="text", value=book.first_published)
         h2 Loan History
         table
             thead
