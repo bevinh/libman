@@ -3,6 +3,7 @@ var router = express.Router();
 var Loan = require("./models").Loan;
 var Book = require("./models").Book;
 var Patron = require("./models").Patron;
+var moment = require('moment');
 
 
 
@@ -24,8 +25,22 @@ router.get('/checked_loans', function(req, res){
     res.render('checked_loans')
 });
 
+router.post('/new', function(req, res){
+//TODO: Find out why this isn't working quite right
+    Loan.create(req.body).then(function(){
+        res.redirect("/all_loans");
+    });
+});
+
 router.get('/new_loan', function(req, res) {
-    res.render('new_loan')
+    var loanedOn = moment().format('YYYY-MM-DD');
+    var returnDate = moment().add('7', 'days').format('YYYY-MM-DD');
+    Book.findAll().then(function(books){
+        Patron.findAll().then(function(patrons){
+            res.render('new_loan', {books: books, patrons: patrons, loanedOn: loanedOn, returnDate: returnDate})
+        });
+    });
+
 });
 
 module.exports = router;

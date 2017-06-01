@@ -10,7 +10,7 @@ router.get('/', function (req, res) {
 
 });
 
-router.post('/', function(req, res){
+router.post('/new', function(req, res){
     Book.create(req.body).then(function(){
         res.redirect("/all_books");
     });

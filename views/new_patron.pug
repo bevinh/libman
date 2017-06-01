@@ -5,7 +5,7 @@ html
     body
         include ./partials/_nav.pug
         h1 New Patron
-        form(action="/all_patrons", method="POST")
+        form(action="/all_patrons/new", method="POST")
             p
                 label.for("first_name") First Name
                 input(id="first_name", name="first_name", type="text")

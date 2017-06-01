@@ -9,11 +9,11 @@ router.get('/', function(req, res){
     });
 });
 
-router.post('/', function(req, res){
+router.post('/new', function(req, res){
     Patron.create(req.body).then(function() {
         res.redirect("/all_patrons");
     });
-})
+});
 
 router.get('/new_patron', function(req, res){
     res.render('new_patron')

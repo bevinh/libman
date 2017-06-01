@@ -3,7 +3,8 @@ module.exports = function(sequelize, DataTypes) {
   var Loan = sequelize.define('Loan', {
     id: {
         type: DataTypes.INTEGER,
-        primaryKey: true
+        primaryKey: true,
+        autoIncrement: true
     },
     book_id: DataTypes.INTEGER,
     patron_id: DataTypes.INTEGER,
