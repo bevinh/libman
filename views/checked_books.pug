@@ -8,12 +8,7 @@ html
         h1 Checked Out Books
         p
             a.button(href="/new_book") Create New Book
-        p Filters &nbsp;
-            a(href="/all_books") All&nbsp;
-            | |
-            a(href="/overdue_books") &nbsp;Overdue&nbsp;
-            | |
-            a(href="/checked_books") &nbsp;Checked Out
+        include ./partials/_book_nav.pug
         table
             thead
                 tr
