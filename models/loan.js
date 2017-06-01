@@ -1,32 +1,21 @@
-const Loan = sequelize.define('loan', {
+'use strict';
+module.exports = function(sequelize, DataTypes) {
+  var Loan = sequelize.define('Loan', {
     id: {
-        type: Sequelize.INTEGER
+        type: DataTypes.INTEGER,
+        primaryKey: true
     },
-    book_id: {
-        type: Sequelize.INTEGER
-    },
-    patron_id: {
-        type: Sequelize.INTEGER
-    },
-    loaned_on: {
-        type: Sequelize.DATE
-    },
-    return_by: {
-        type: Sequelize.DATE
-    },
-    returned_on: {
-        type: Sequelize.DATE
+    book_id: DataTypes.INTEGER,
+    patron_id: DataTypes.INTEGER,
+    loaned_on: DataTypes.DATE,
+    return_by: DataTypes.DATE,
+    returned_on: DataTypes.DATE
+  }, {
+    classMethods: {
+      associate: function(models) {
+        // associations can be defined here
+      }
     }
-});
-
-// force: true will drop the table if it already exists
-Loan.sync({force: true}).then(function(){
-    // Table created
-    return Loan.create({
-        id: 1,
-        book_id: 1,
-        patron_id: 1,
-        loaned_on: 2017-05-20,
-        return_by: 2017-06-20
-    });
-});
+  });
+  return Loan;
+};

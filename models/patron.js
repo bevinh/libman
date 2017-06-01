@@ -1,37 +1,22 @@
-const Patron = sequelize.define('patron', {
+'use strict';
+module.exports = function(sequelize, DataTypes) {
+  var Patron = sequelize.define('Patron', {
     id: {
-        type: Sequelize.INTEGER
+        type: DataTypes.INTEGER,
+        primaryKey: true
     },
-    first_name: {
-        type: Sequelize.STRING
-    },
-    last_name: {
-        type: Sequelize.STRING
-    },
-    address: {
-        type: Sequelize.STRING
-    },
-    email: {
-        type: Sequelize.STRING
-    },
-    library_id: {
-        type: Sequelize.STRING
-    },
-    zip_code: {
-        type: Sequelize.INTEGER
+    first_name: DataTypes.STRING,
+    last_name: DataTypes.STRING,
+    address: DataTypes.STRING,
+    email: DataTypes.STRING,
+    library_id: DataTypes.STRING,
+    zip_code: DataTypes.INTEGER
+  }, {
+    classMethods: {
+      associate: function(models) {
+        // associations can be defined here
+      }
     }
-});
-
-// force: true will drop the table if it already exists
-Patron.sync({force: true}).then(function(){
-    // Table created
-    return Patron.create({
-        id: 1,
-        first_name: 'John',
-        last_name: 'Hancock',
-        address: '401 W Washington St. Washington D.C.',
-        email: 'johnhancock7@gmail.com',
-        library_id: 'MLL1001',
-        zip_code: '47909'
-    });
-});
+  });
+  return Patron;
+};

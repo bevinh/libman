@@ -58,6 +58,4 @@ app.get('/patron_detail', function(req, res){
     res.render('patron_detail')
 });
 
-app.listen(3000, function () {
-    console.log('Libman listening on port 3000!')
-});
+module.exports = app;
