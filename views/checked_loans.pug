@@ -16,17 +16,20 @@ html
                     th Patron
                     th Loaned On
                     th Return By
-                    th Returned On
                     th Action
             tbody
+            each loan in loans
                 tr
                     td
-                        a(href="/all_books/book_detail") Emma
+                        a(href="/all_books/book_detail/" + loan.book_id)
+                            =loan.Book.title
                     td
-                        a(href="/all_patrons/patron_detail") Dave McFarland
-                    td 2015-12-10
-                    td 2020-10-20
+                        a(href="/all_patrons/patron_detail/" + loan.patron_id)
+                            =loan.Patron.first_name + " " + loan.Patron.last_name
                     td
+                        =loan.loaned_on
+                    td
+                        =loan.return_by
                     td
                         a.button(href="/all_books/return_book") Return Book
 
