@@ -52,7 +52,7 @@
         <entry file="file://$PROJECT_DIR$/loan.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="420">
-              <caret line="28" column="51" lean-forward="false" selection-start-line="28" selection-start-column="51" selection-end-line="28" selection-end-column="51" />
+              <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -61,8 +61,18 @@
       <file leaf-file-name="new_loan.pug" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/new_loan.pug">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="50" lean-forward="true" selection-start-line="10" selection-start-column="50" selection-end-line="10" selection-end-column="50" />
+            <state relative-caret-position="255">
+              <caret line="17" column="91" lean-forward="true" selection-start-line="17" selection-start-column="91" selection-end-line="17" selection-end-column="91" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="new_patron.pug" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/new_patron.pug">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="7" column="33" lean-forward="false" selection-start-line="7" selection-start-column="33" selection-end-line="7" selection-end-column="33" />
               <folding />
             </state>
           </provider>
@@ -162,9 +172,9 @@
         <option value="$PROJECT_DIR$/patron.js" />
         <option value="$PROJECT_DIR$/views/new_book.pug" />
         <option value="$PROJECT_DIR$/views/new_patron.pug" />
-        <option value="$PROJECT_DIR$/views/new_loan.pug" />
         <option value="$PROJECT_DIR$/models/loan.js" />
         <option value="$PROJECT_DIR$/models/patron.js" />
+        <option value="$PROJECT_DIR$/views/new_loan.pug" />
         <option value="$PROJECT_DIR$/loan.js" />
       </list>
     </option>
@@ -349,6 +359,9 @@
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
   </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="9bfe77bf-f009-4799-ba13-6104d594c927" name="Default" comment="" />
@@ -356,12 +369,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1495923649369</updated>
-      <workItem from="1495923651168" duration="36511000" />
+      <workItem from="1495923651168" duration="37023000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="36511000" />
+    <option name="totallyTimeSpent" value="37023000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -757,14 +770,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/new_patron.pug">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="33" lean-forward="false" selection-start-line="7" selection-start-column="33" selection-end-line="7" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/new_book.pug">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -813,14 +818,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/new_loan.pug">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="50" lean-forward="true" selection-start-line="10" selection-start-column="50" selection-end-line="10" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/migrations/20170531215232-create-loan.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
@@ -829,10 +826,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/views/new_patron.pug">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="33" lean-forward="false" selection-start-line="7" selection-start-column="33" selection-end-line="7" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/new_loan.pug">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="91" lean-forward="true" selection-start-line="17" selection-start-column="91" selection-end-line="17" selection-end-column="91" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/loan.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
-          <caret line="28" column="51" lean-forward="false" selection-start-line="28" selection-start-column="51" selection-end-line="28" selection-end-column="51" />
+          <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
           <folding />
         </state>
       </provider>

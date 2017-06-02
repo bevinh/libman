@@ -26,7 +26,6 @@ router.get('/checked_loans', function(req, res){
 });
 
 router.post('/new', function(req, res){
-//TODO: Find out why this isn't working quite right
     Loan.create(req.body).then(function(){
         res.redirect("/all_loans");
     });

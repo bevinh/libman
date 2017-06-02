@@ -8,19 +8,19 @@ html
         form(action="/all_loans/new" method="POST")
             p
                 label(for="book") Book
-                select#book(type="select", name=book_id)
+                select#book(type="select", name="book_id")
                     each book in books
                         option(value=book.id)= book.title
             p
                 label(for="patron_id") Patron
-                select#patron_id(type="select", name=patron_id)
+                select#patron_id(type="select", name="patron_id")
                     each patron in patrons
                         option(value=patron.id)= patron.first_name + " " + patron.last_name
             p
                 label(for="loaned_on") Loaned on:
-                input#loaned_on(type="text", name=loaned_on, value=loanedOn)
+                input#loaned_on(type="text", name="loaned_on", value=loanedOn)
             p
                 label(for="return_by") Return by:
-                input#return_by(type="text", name=return_by, value=returnDate)
+                input#return_by(type="text", name="return_by", value=returnDate)
             p
                 input(type="submit", value="Create New Loan")
