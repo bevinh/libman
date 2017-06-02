@@ -3,7 +3,6 @@ html
         title Overdue Books
         link(rel='stylesheet', href="/static/stylesheets/style.css", type='text/css')
     body
-        //TODO: Fix Menu Routes
         include ./partials/_nav.pug
         h1 Overdue Books
         p
@@ -17,9 +16,14 @@ html
                     th Genre
                     th Year Released
             tbody
+            each loan in loans
                 tr
                     td
-                        a(href="/all_books/book_detail") Harry Potter and the Goblet of Fire
-                    td J.K. Rowling
-                    td Fantasy
-                    td 2000
+                        a(href="/all_books/book_detail/" + loan.book_id)
+                            =loan.Book.title
+                    td
+                        =loan.Book.author
+                    td
+                        =loan.Book.genre
+                    td
+                        =loan.Book.first_published

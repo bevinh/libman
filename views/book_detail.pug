@@ -30,14 +30,20 @@ html
                     th Returned On
                     th Action
             tbody
+            each loan in loans
                 tr
                     td
-                        a(href="/all_books/book_detail") A Brief History of Time
+                        a(href="/all_books/book_detail/" + loan.book_id)
+                            =loan.Book.title
                     td
-                        a(href="../patron_detail") Andrew Chalkley
-                    td 2015-12-12
-                    td 2015-12-19
+                        a(href="../patron_detail/" + loan.patron_id)
+                            =loan.Patron.first_name + " " + loan.Patron.last_name
                     td
+                        =loan.loaned_on
+                    td
+                        =loan.return_by
+                    td
+                        =loan.returned_on
                     td
                         a.button(href="../return_book") Return Book
 

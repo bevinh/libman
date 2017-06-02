@@ -25,7 +25,9 @@ router.get('/overdue_loans', function(req, res){
         {model: Book, required: true},
         {model: Patron, required: true}
         ],
-        where: { return_by: {$lt: date}}}).then(function(loans) {
+        where: { return_by: {$lt: date},
+        returned_on: {$eq: null}
+        }}).then(function(loans) {
         res.render('overdue_loans', {loans: loans})
     });
 });
