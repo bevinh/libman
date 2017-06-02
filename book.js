@@ -23,6 +23,7 @@ router.get('/new_book', function(req, res, next){
 });
 
 router.get('/return_book', function(req, res){
+    //TODO: Return book function
     res.render('return_book')
 });
 

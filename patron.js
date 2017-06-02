@@ -20,6 +20,7 @@ router.get('/new_patron', function(req, res){
 });
 
 router.get('/patron_detail/:id', function(req, res){
+    //TODO: Add Associations
     Patron.findById(req.params.id).then(function(patron){
         res.render('patron_detail', {patron: patron})
     });

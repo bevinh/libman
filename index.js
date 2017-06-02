@@ -5,6 +5,8 @@ var patrons = require('./patron');
 var loans = require('./loan');
 var bodyParser = require('body-parser')
 
+//TODO: Move routes into routes file
+
 app.use(bodyParser.json());
 
 app.use(bodyParser.urlencoded({extended: true}));
