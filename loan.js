@@ -18,7 +18,16 @@ router.get('/', function(req, res){
 });
 
 router.get('/overdue_loans', function(req, res){
-    res.render('overdue_loans')
+    Loan.belongsTo(Book, {foreignKey: 'book_id'});
+    Loan.belongsTo(Patron, {foreignKey: 'patron_id'});
+    var date = moment();
+    Loan.findAll({include: [
+        {model: Book, required: true},
+        {model: Patron, required: true}
+        ],
+        where: { return_by: {$lt: date}}}).then(function(loans) {
+        res.render('overdue_loans', {loans: loans})
+    });
 });
 
 router.get('/checked_loans', function(req, res){
