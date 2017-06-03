@@ -46,7 +46,7 @@ router.get('/return_book/:id', function(req, res){
 });
 
 //function to actually update the above loan
-router.put('/return_book/:id', function(req, res, next) {
+router.put('/return_book/:id/:location', function(req, res, next) {
     Loan.belongsTo(Book, {foreignKey: 'book_id'});
     Loan.belongsTo(Patron, {foreignKey: 'patron_id'});
     Book.findById(req.params.id).then(function(book) {
@@ -57,10 +57,13 @@ router.put('/return_book/:id', function(req, res, next) {
                 {model: Patron, required: true}],
             where: {book_id: book.id}
         }).then(function (loan) {
-            console.log(req.body)
+            //update the loan
             return loan.update(req.body);
-        }).then(function () {
-            res.redirect('/all_books')
+        }).then(function (loan) {
+            if(req.params.location == 1){
+                res.redirect('/all_patrons/patron_detail/' + loan.patron_id)
+            }
+
         });
     });
 });

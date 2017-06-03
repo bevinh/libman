@@ -17,7 +17,7 @@ html
         p
             strong Return By:&nbsp;
                 =loan.return_by
-        form(action="/all_books/return_book/" + loan.book_id + "?_method=PUT", method="post")
+        form(action="/all_books/return_book/" + loan.book_id + "/1" + "?_method=PUT", method="post")
             p
                 label(for="returned_on")
                 input#returned_on(type="text", name="returned_on" value=date)
