@@ -5,6 +5,7 @@ var Loan = require("./../models/index").Loan;
 var Patron = require("./../models/index").Patron;
 var moment = require('moment');
 
+//all books function
 router.get('/', function (req, res) {
     Book.findAll().then(function(books){
         res.render('all_books', {books: books})
@@ -12,12 +13,14 @@ router.get('/', function (req, res) {
 
 });
 
+//new book function
 router.post('/new', function(req, res){
     Book.create(req.body).then(function(){
         res.redirect("/all_books");
     });
 });
 
+//new book build
 router.get('/new_book', function(req, res, next){
     res.render('new_book', {book: Book.build()})
 });
@@ -27,6 +30,7 @@ router.get('/return_book', function(req, res){
     res.render('return_book')
 });
 
+//find all checked out books
 router.get('/checked_books', function(req, res){
     Loan.belongsTo(Book, {foreignKey: 'book_id'});
     Loan.findAll({include: [
@@ -36,6 +40,8 @@ router.get('/checked_books', function(req, res){
     });
 });
 
+
+//find all overdue books
 router.get('/overdue_books', function(req, res) {
     Loan.belongsTo(Book, {foreignKey: 'book_id'});
     var date = moment();
@@ -47,6 +53,7 @@ router.get('/overdue_books', function(req, res) {
     });
 });
 
+//find the book detail, and get the history of all checkouts
 router.get('/book_detail/:id', function(req, res){
     Loan.belongsTo(Book, {foreignKey: 'book_id'});
     Loan.belongsTo(Patron, {foreignKey: 'patron_id'});

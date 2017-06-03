@@ -6,7 +6,7 @@ var Patron = require("./../models/index").Patron;
 var moment = require('moment');
 
 
-
+//get all loans
 router.get('/', function(req, res){
     Loan.belongsTo(Book, {foreignKey: 'book_id'});
     Loan.belongsTo(Patron, {foreignKey: 'patron_id'});
@@ -17,6 +17,7 @@ router.get('/', function(req, res){
     });
 });
 
+//get all loans with a return date less than today
 router.get('/overdue_loans', function(req, res){
     Loan.belongsTo(Book, {foreignKey: 'book_id'});
     Loan.belongsTo(Patron, {foreignKey: 'patron_id'});
@@ -32,6 +33,7 @@ router.get('/overdue_loans', function(req, res){
     });
 });
 
+//get all loans currently checked out with no return date
 router.get('/checked_loans', function(req, res){
     Loan.belongsTo(Book, {foreignKey: 'book_id'});
     Loan.belongsTo(Patron, {foreignKey: 'patron_id'});
@@ -44,13 +46,16 @@ router.get('/checked_loans', function(req, res){
     });
 });
 
+//new loan route
 router.post('/new', function(req, res){
     Loan.create(req.body).then(function(){
         res.redirect("/all_loans");
     });
 });
 
+//create a brand new loan
 router.get('/new_loan', function(req, res) {
+    //TODO: Figure out why date isn't in proper format.
     var loanedOn = moment().format('YYYY-MM-DD');
     var returnDate = moment().add('7', 'days').format('YYYY-MM-DD');
     Book.findAll().then(function(books){
