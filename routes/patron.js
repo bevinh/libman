@@ -1,6 +1,8 @@
 const express = require('express');
 var router = express.Router();
 var Patron = require("./../models/index").Patron;
+var Book = require("./../models/index").Book;
+var Loan = require("./../models/index").Loan;
 
 //find all patrons
 router.get('/', function(req, res){
@@ -22,9 +24,15 @@ router.get('/new_patron', function(req, res){
 });
 
 router.get('/patron_detail/:id', function(req, res){
-    //TODO: Add Associations
+    Loan.belongsTo(Book, {foreignKey: 'book_id'});
+    Loan.belongsTo(Patron, {foreignKey: 'patron_id'});
     Patron.findById(req.params.id).then(function(patron){
-        res.render('patron_detail', {patron: patron})
+        Loan.findAll({include: [
+            {model: Book, required: true},
+            {model: Patron, required: true}],
+            where: { patron_id: patron.id}}).then(function(loans){
+            res.render('patron_detail', {patron: patron, loans: loans})
+        });
     });
 
 });
