@@ -5,6 +5,7 @@ var Book = require("./../models/index").Book;
 var Patron = require("./../models/index").Patron;
 var moment = require('moment');
 
+//TODO: Update functions
 
 //get all loans
 router.get('/', function(req, res){

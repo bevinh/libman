@@ -5,6 +5,9 @@ var Loan = require("./../models/index").Loan;
 var Patron = require("./../models/index").Patron;
 var moment = require('moment');
 
+//TODO: Update functions
+
+
 //all books function
 router.get('/', function (req, res) {
     Book.findAll().then(function(books){
@@ -25,10 +28,24 @@ router.get('/new_book', function(req, res, next){
     res.render('new_book', {book: Book.build()})
 });
 
-router.get('/return_book', function(req, res){
-    //TODO: Return book function
-    res.render('return_book')
+router.get('/return_book/:id', function(req, res){
+    var d = moment().format('YYYY-MM-DD');
+    Loan.belongsTo(Book, {foreignKey: 'book_id'});
+    Loan.belongsTo(Patron, {foreignKey: 'patron_id'});
+    //get the param & identify the book
+    Book.findById(req.params.id).then(function(book){
+        //identify the loan
+        Loan.findOne({include: [
+            {model: Book, required: true},
+            {model: Patron, required: true}],
+            where: { book_id: book.id}}).then(function(loan){
+            res.render('return_book', {date: d, loan: loan})
+        });
+    });
 });
+//function to actually update the above loan
+//update the date to today
+//put statement to save it
 
 //find all checked out books
 router.get('/checked_books', function(req, res){

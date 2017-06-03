@@ -6,17 +6,20 @@ html
         include ./partials/_nav.pug
         h1 Patron: Return Book
         p
-            strong Book Title:
-                | Harry Potter and the Goblet of Fire
-            strong Loaned By:
-                | Andrew Chalkley
-            strong Loaned On:
-                | 2015-12-11
-            strong Return By:
-                | 2015-12-18
+            strong Book Title: &nbsp;
+                =loan.Book.title
+        p
+            strong Loaned To:&nbsp;
+                =loan.Patron.first_name + " " + loan.Patron.last_name
+        p
+            strong Loaned On:&nbsp;
+                =loan.loaned_on
+        p
+            strong Return By:&nbsp;
+                =loan.return_by
         form
             p
                 label(for="returned_on")
-                input#returned_on(type="text", value="2020-10-10")
+                input#returned_on(type="text", value=date)
             p
                 input(type="submit", value="Return Book")
