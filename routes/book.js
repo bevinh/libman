@@ -28,6 +28,7 @@ router.get('/new_book', function(req, res, next){
     res.render('new_book', {book: Book.build()})
 });
 
+//function to get the book loan put together
 router.get('/return_book/:id', function(req, res){
     var d = moment().format('YYYY-MM-DD');
     Loan.belongsTo(Book, {foreignKey: 'book_id'});
@@ -43,9 +44,27 @@ router.get('/return_book/:id', function(req, res){
         });
     });
 });
+
 //function to actually update the above loan
-//update the date to today
-//put statement to save it
+router.put('/return_book/:id', function(req, res, next) {
+    Loan.belongsTo(Book, {foreignKey: 'book_id'});
+    Loan.belongsTo(Patron, {foreignKey: 'patron_id'});
+    Book.findById(req.params.id).then(function(book) {
+        //identify the loan
+        Loan.findOne({
+            include: [
+                {model: Book, required: true},
+                {model: Patron, required: true}],
+            where: {book_id: book.id}
+        }).then(function (loan) {
+            console.log(req.body)
+            return loan.update(req.body);
+        }).then(function () {
+            res.redirect('/all_books')
+        });
+    });
+});
+
 
 //find all checked out books
 router.get('/checked_books', function(req, res){
