@@ -1,8 +1,8 @@
 const express = require('express');
 var router = express.Router();
-var Book = require("./models").Book;
-var Loan = require("./models").Loan;
-var Patron = require("./models").Patron;
+var Book = require("./../models/index").Book;
+var Loan = require("./../models/index").Loan;
+var Patron = require("./../models/index").Patron;
 var moment = require('moment');
 
 router.get('/', function (req, res) {

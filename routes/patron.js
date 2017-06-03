@@ -1,6 +1,6 @@
 const express = require('express');
 var router = express.Router();
-var Patron = require("./models").Patron;
+var Patron = require("./../models/index").Patron;
 
 
 router.get('/', function(req, res){

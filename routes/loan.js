@@ -1,8 +1,8 @@
 const express = require('express');
 var router = express.Router();
-var Loan = require("./models").Loan;
-var Book = require("./models").Book;
-var Patron = require("./models").Patron;
+var Loan = require("./../models/index").Loan;
+var Book = require("./../models/index").Book;
+var Patron = require("./../models/index").Patron;
 var moment = require('moment');
 
 

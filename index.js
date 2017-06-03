@@ -1,8 +1,8 @@
 const express = require('express');
 const app = express();
-var books = require('./book');
-var patrons = require('./patron');
-var loans = require('./loan');
+var books = require('./routes/book');
+var patrons = require('./routes/patron');
+var loans = require('./routes/loan');
 var bodyParser = require('body-parser')
 
 //TODO: Move routes into routes file
