@@ -6,7 +6,7 @@ html
         include ./partials/_nav.pug
         h1 Loans
         p
-            a.button(href="../new_loan.html") Create New Loan
+            a.button(href="/all_loans/new_loan") Create New Loan
         include ./partials/_loan_nav.pug
         table
             thead
@@ -30,4 +30,4 @@ html
                     td
                         =loan.return_by
                     td
-                        a.button(href="/all_books/return_book") Return Book
+                        a.button(href="/all_books/return_book/" + loan.book_id) Return Book
