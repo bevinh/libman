@@ -51,7 +51,7 @@ html
                     td
                         =loan.return_by
                     td
-                        =loan.returned_on
+                        =moment(loan.returned_on).format('YYYY-MM-DD')
                     td
                         a.button(href="/all_books/return_book/" + loan.book_id) Return Book
 

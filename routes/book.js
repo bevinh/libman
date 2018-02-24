@@ -33,7 +33,6 @@ router.get('/return_book/:id', function(req, res){
     //get the param & identify the book
     Book.findById(req.params.id).then(function(book){
         //identify the loan
-        //TODO: Figure out where I came from to send the case for the redirect after update
         Loan.findOne({include: [
             {model: Book, required: true},
             {model: Patron, required: true}],
