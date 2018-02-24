@@ -5,19 +5,21 @@ html
     body
         include ./partials/_nav.pug
         h1 Book: A Brief History of Time
-        form
+        form(action="/all_books/book_detail/" + book.id + "?_method=PUT", method="post")
             p
                 label.for("title") Title
-                input(id="title", type="text", value=book.title)
+                input#title(type="text", name="title" value=book.title)
             p
                 label.for("author") Author
-                input(id="author", type="text", value=book.author)
+                input#author(type="text", name="author" value=book.author)
             p
                 label.for("genre") Genre
-                input(id="genre", type="text", value=book.genre)
+                input#genre(type="text", name="genre" value=book.genre)
             p
                 label.for("first_published") First Published
-                input(id="first_published", type="text", value=book.first_published)
+                input#first_published(type="text",name="first_published" value=book.first_published)
+            p
+                input(type='submit', value="Update")
         h2 Loan History
         table
             thead

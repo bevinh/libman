@@ -5,6 +5,7 @@ var Loan = require("./../models/index").Loan;
 var Patron = require("./../models/index").Patron;
 var moment = require('moment');
 
+
 //all books function
 router.get('/', function (req, res) {
     Book.findAll().then(function(books){
@@ -19,6 +20,8 @@ router.post('/new', function(req, res){
         res.redirect("/all_books");
     });
 });
+
+
 
 //new book build
 router.get('/new_book', function(req, res, next){
@@ -91,19 +94,36 @@ router.get('/overdue_books', function(req, res) {
 });
 
 //find the book detail, and get the history of all checkouts
-router.get('/book_detail/:id', function(req, res){
+router.get('/book_detail/:id', function(req, res) {
     Loan.belongsTo(Book, {foreignKey: 'book_id'});
     Loan.belongsTo(Patron, {foreignKey: 'patron_id'});
     var date = moment();
-    Book.findById(req.params.id).then(function(book){
-    Loan.findAll({include: [
-        {model: Book, required: true},
-        {model: Patron, required: true}],
-        where: { book_id: book.id}}).then(function(loans){
+    Book.findById(req.params.id).then(function (book) {
+        Loan.findAll({
+            include: [
+                {model: Book, required: true},
+                {model: Patron, required: true}],
+            where: {book_id: book.id}
+        }).then(function (loans) {
             res.render('book_detail', {book: book, loans: loans})
         });
-    })
+    });
 
+//update book function
+    router.put('/book_detail/:id', function (req, res) {
+        Book.findById(req.params.id).then(function (book) {
+            return book.update(req.body);
+        }).then(function (book) {
+            res.redirect('/all_books');
+        }).catch(function (err) {
+            // if validation error, re-render page with error messages
+            if (err.name === 'SequelizeValidationError') {
+                Book.findAll({
+                    include: [{model: Loan, include: [{model: Patron}]}],
+                    where: {id: req.params.id}
+                })
+            }
+        });
+    });
 });
-
 module.exports = router;

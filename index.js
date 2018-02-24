@@ -4,8 +4,7 @@ var books = require('./routes/book');
 var patrons = require('./routes/patron');
 var loans = require('./routes/loan');
 var bodyParser = require('body-parser');
-var methodOverride = require('method-override')
-
+var methodOverride = require('method-override');
 
 app.use(bodyParser.json());
 
