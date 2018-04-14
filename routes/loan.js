@@ -49,7 +49,16 @@ router.get('/checked_loans', function(req, res){
 
 //new loan route
 router.post('/new', function(req, res){
-    Loan.create(req.body).then(function(){
+    var loanedOn = moment().format('YYYY-MM-D');
+    var returnDate = moment().add(7, 'days').format('YYYY-MM-D');
+    console.log(req.body);
+    var loan = {
+        book_id: req.body.book_id,
+        patron_id: req.body.patron_id,
+        loaned_on: moment(req.body.loaned_on),
+        return_by: moment(req.body.return_by)
+    }
+    Loan.create(loan).then(function(){
         res.redirect("/all_loans");
     });
 });
@@ -64,6 +73,29 @@ router.get('/new_loan', function(req, res) {
         });
     });
 
+});
+
+router.put('/update/:id/:location', function(req, res, next) {
+    Loan.belongsTo(Book, {foreignKey: 'book_id'});
+    Loan.belongsTo(Patron, {foreignKey: 'patron_id'});
+    Book.findById(req.params.id).then(function(book) {
+        //identify the loan
+        Loan.findOne({
+            include: [
+                {model: Book, required: true},
+                {model: Patron, required: true}],
+            where: {book_id: book.id}
+        }).then(function (loan) {
+            //update the loan
+            return loan.update(req.body);
+        }).then(function (loan) {
+            //TODO: Finish params
+            if(req.params.location == 1){
+                res.redirect('/all_patrons/patron_detail/' + loan.patron_id)
+            }
+
+        });
+    });
 });
 
 module.exports = router;
