@@ -36,32 +36,29 @@ router.get('/return_book/:id', function(req, res){
     Loan.belongsTo(Book, {foreignKey: 'book_id'});
     Loan.belongsTo(Patron, {foreignKey: 'patron_id'});
     //get the param & identify the book
-    Book.findById(req.params.id).then(function(book){
-        //identify the loan
         Loan.findOne({include: [
             {model: Book, required: true},
             {model: Patron, required: true}],
-            where: { book_id: book.id}}).then(function(loan){
+            where: { id: req.params.id}}).then(function(loan){
             res.render('return_book', {date: d, loan: loan})
         });
-    });
 });
 
 //function to actually update the above loan
 router.put('/return_book/:id/:location', function(req, res, next) {
-
      Loan.belongsTo(Book, {foreignKey: 'book_id'});
      Loan.belongsTo(Patron, {foreignKey: 'patron_id'});
-     Book.findById(req.params.id).then(function(book) {
-         //identify the loan
          Loan.findOne({include: [
              {model: Book, required: true},
              {model: Patron, required: true}],
-             where: { book_id: book.id}}).then(function(loan){
-                loan.update(req.body)
+             where: { id: req.params.id}}).then(function(loan){
+                 console.log(loan)
+                 var loan_update = {
+                     returned_on: req.body.returned_on
+                 };
+                loan.update(loan_update);
              res.redirect('/all_patrons/patron_detail/' + loan.patron_id);
          })
-     })
 });
 
 

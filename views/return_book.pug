@@ -17,7 +17,7 @@ html
         p
             strong Return By:&nbsp;
                 =moment(loan.return_by).format("YYYY-MM-D")
-        form(action="/all_books/return_book/" + loan.Book.id + "/1" + "?_method=PUT", method="POST")
+        form(action="/all_books/return_book/" + loan.id + "/1" + "?_method=PUT", method="POST")
             p
                 label(for="returned_on")
                 input(id=returned_on, type="text", name="returned_on" value=date)

@@ -4,8 +4,6 @@ var Patron = require("./../models/index").Patron;
 var Book = require("./../models/index").Book;
 var Loan = require("./../models/index").Loan;
 
-//TODO: Update functions
-
 //find all patrons
 router.get('/', function(req, res){
     Patron.findAll().then(function(patrons) {
