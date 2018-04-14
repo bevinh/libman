@@ -2,17 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9bfe77bf-f009-4799-ba13-6104d594c927" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/partials/_error.pug" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library.db" afterPath="$PROJECT_DIR$/library.db" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/book.js" afterPath="$PROJECT_DIR$/models/book.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/book.js" afterPath="$PROJECT_DIR$/routes/book.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/loan.js" afterPath="$PROJECT_DIR$/routes/loan.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/all_loans.pug" afterPath="$PROJECT_DIR$/views/all_loans.pug" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/book_detail.pug" afterPath="$PROJECT_DIR$/views/book_detail.pug" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/checked_loans.pug" afterPath="$PROJECT_DIR$/views/checked_loans.pug" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/patron_detail.pug" afterPath="$PROJECT_DIR$/views/patron_detail.pug" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/return_book.pug" afterPath="$PROJECT_DIR$/views/return_book.pug" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -49,81 +39,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="all_books.pug" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/all_books.pug">
+      <file leaf-file-name="book_detail.pug" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/views/book_detail.pug">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="142">
-              <caret line="21" column="55" lean-forward="false" selection-start-line="21" selection-start-column="55" selection-end-line="21" selection-end-column="55" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="all_patrons.pug" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/all_patrons.pug">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-99">
-              <caret line="4" column="8" lean-forward="false" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="checked_books.pug" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/checked_books.pug">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-19">
-              <caret line="8" column="37" lean-forward="false" selection-start-line="8" selection-start-column="37" selection-end-line="8" selection-end-column="37" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="new_book.pug" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/new_book.pug">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="21" column="74" lean-forward="true" selection-start-line="21" selection-start-column="74" selection-end-line="21" selection-end-column="74" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="return_book.pug" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/views/return_book.pug">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="250">
-              <caret line="18" column="59" lean-forward="false" selection-start-line="18" selection-start-column="59" selection-end-line="18" selection-end-column="59" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="new_loan.pug" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/new_loan.pug">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="20" column="25" lean-forward="false" selection-start-line="20" selection-start-column="25" selection-end-line="20" selection-end-column="25" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="new_patron.pug" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/new_patron.pug">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-38">
-              <caret line="7" column="33" lean-forward="false" selection-start-line="7" selection-start-column="33" selection-end-line="7" selection-end-column="33" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="patron_detail.pug" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/patron_detail.pug">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="310">
-              <caret line="53" column="67" lean-forward="false" selection-start-line="53" selection-start-column="67" selection-end-line="53" selection-end-column="67" />
+            <state relative-caret-position="120">
+              <caret line="8" column="32" lean-forward="false" selection-start-line="8" selection-start-column="32" selection-end-line="8" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -192,7 +112,6 @@
         <option value="$PROJECT_DIR$/views/new_book.pug" />
         <option value="$PROJECT_DIR$/index.js" />
         <option value="$PROJECT_DIR$/views/partials/_error.pug" />
-        <option value="$PROJECT_DIR$/views/book_detail.pug" />
         <option value="$PROJECT_DIR$/models/book.js" />
         <option value="$PROJECT_DIR$/routes/book.js" />
         <option value="$PROJECT_DIR$/routes/loan.js" />
@@ -200,6 +119,7 @@
         <option value="$PROJECT_DIR$/views/checked_loans.pug" />
         <option value="$PROJECT_DIR$/views/patron_detail.pug" />
         <option value="$PROJECT_DIR$/views/return_book.pug" />
+        <option value="$PROJECT_DIR$/views/book_detail.pug" />
       </list>
     </option>
   </component>
@@ -269,6 +189,12 @@
               <item name="libman" type="b2602c69:ProjectViewProjectNode" />
               <item name="libman" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="libman" type="b2602c69:ProjectViewProjectNode" />
+              <item name="libman" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="partials" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="libman" type="b2602c69:ProjectViewProjectNode" />
@@ -394,12 +320,12 @@
       <workItem from="1519491121551" duration="5815000" />
       <workItem from="1519653186311" duration="1550000" />
       <workItem from="1522344292883" duration="191000" />
-      <workItem from="1523729782707" duration="671000" />
+      <workItem from="1523729782707" duration="770000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="54814000" />
+    <option name="totallyTimeSpent" value="54913000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -677,14 +603,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/book_detail.pug">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" column="17" lean-forward="false" selection-start-line="26" selection-start-column="17" selection-end-line="26" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/models/book.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
@@ -749,58 +667,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/loan.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="57" column="44" lean-forward="false" selection-start-line="57" selection-start-column="44" selection-end-line="57" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/all_books.pug">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="142">
-          <caret line="21" column="55" lean-forward="false" selection-start-line="21" selection-start-column="55" selection-end-line="21" selection-end-column="55" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/all_patrons.pug">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-99">
-          <caret line="4" column="8" lean-forward="false" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/checked_books.pug">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-19">
-          <caret line="8" column="37" lean-forward="false" selection-start-line="8" selection-start-column="37" selection-end-line="8" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/new_book.pug">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="74" lean-forward="true" selection-start-line="21" selection-start-column="74" selection-end-line="21" selection-end-column="74" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/new_loan.pug">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
           <caret line="20" column="25" lean-forward="false" selection-start-line="20" selection-start-column="25" selection-end-line="20" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/new_patron.pug">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-38">
-          <caret line="7" column="33" lean-forward="false" selection-start-line="7" selection-start-column="33" selection-end-line="7" selection-end-column="33" />
           <folding />
         </state>
       </provider>
@@ -817,6 +687,62 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="250">
           <caret line="18" column="59" lean-forward="false" selection-start-line="18" selection-start-column="59" selection-end-line="18" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/new_book.pug">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="74" lean-forward="true" selection-start-line="21" selection-start-column="74" selection-end-line="21" selection-end-column="74" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/checked_books.pug">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-19">
+          <caret line="8" column="37" lean-forward="false" selection-start-line="8" selection-start-column="37" selection-end-line="8" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/all_patrons.pug">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-99">
+          <caret line="4" column="8" lean-forward="false" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/all_books.pug">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="142">
+          <caret line="21" column="55" lean-forward="false" selection-start-line="21" selection-start-column="55" selection-end-line="21" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/new_patron.pug">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-38">
+          <caret line="7" column="33" lean-forward="false" selection-start-line="7" selection-start-column="33" selection-end-line="7" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/loan.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="57" column="44" lean-forward="false" selection-start-line="57" selection-start-column="44" selection-end-line="57" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/book_detail.pug">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="32" lean-forward="false" selection-start-line="8" selection-start-column="32" selection-end-line="8" selection-end-column="32" />
           <folding />
         </state>
       </provider>

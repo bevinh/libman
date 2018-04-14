@@ -6,7 +6,7 @@ html
         include ./partials/_nav.pug
         h1 Book: A Brief History of Time
         if errors
-            include ./partials/error
+            include ./partials/_error
         form(action="/all_books/book_detail/" + book.id + "?_method=PUT", method="post")
             p
                 label.for("title") Title
