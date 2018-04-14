@@ -5,7 +5,6 @@ var Book = require("./../models/index").Book;
 var Patron = require("./../models/index").Patron;
 var moment = require('moment');
 
-//TODO: Update functions
 
 //get all loans
 router.get('/', function(req, res){
@@ -89,7 +88,6 @@ router.put('/update/:id/:location', function(req, res, next) {
             //update the loan
             return loan.update(req.body);
         }).then(function (loan) {
-            //TODO: Finish params
             if(req.params.location == 1){
                 res.redirect('/all_patrons/patron_detail/' + loan.patron_id)
             }

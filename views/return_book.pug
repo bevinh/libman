@@ -20,6 +20,6 @@ html
         form(action="/all_books/return_book/" + loan.Book.id + "/1" + "?_method=PUT", method="POST")
             p
                 label(for="returned_on")
-                input#returned_on(type="text", name="returned_on" value=date)
+                input(id=returned_on, type="text", name="returned_on" value=date)
             p
                 input(type="submit", value="Return Book")

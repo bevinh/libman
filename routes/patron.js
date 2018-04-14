@@ -39,4 +39,27 @@ router.get('/patron_detail/:id', function(req, res){
 
 });
 
+router.put('/patron_detail/:id', function(req, res){
+    Loan.belongsTo(Book, {foreignKey: 'book_id'});
+    Loan.belongsTo(Patron, {foreignKey: 'patron_id'});
+    Patron.findById(req.params.id).then(function(patron){
+        var patron_update = {
+            first_name: req.body.first_name,
+            last_name: req.body.last_name,
+            address: req.body.address,
+            email: req.body.email,
+            library_id: req.body.library_id,
+            zip_code: req.body.zip_code
+        };
+        patron.update(patron_update);
+        Loan.findAll({include: [
+            {model: Book, required: true},
+            {model: Patron, required: true}],
+            where: { patron_id: patron.id}}).then(function(loans){
+            res.redirect('/all_patrons/patron_detail/' + patron.id);
+        });
+    });
+
+});
+
 module.exports = router;
