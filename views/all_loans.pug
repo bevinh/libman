@@ -27,11 +27,11 @@ html
                         a(href="/all_patrons/patron_detail/" + loan.patron_id)
                             =loan.Patron.first_name + " " + loan.Patron.last_name
                     td
-                        =loan.loaned_on
+                        =moment(loan.loaned_on).format("YYYY-MM-D")
                     td
-                        =loan.returned_by
+                        =moment(loan.return_by).format("YYYY-MM-D")
                     td
-                        =loan.returned_on
+                        =moment(loan.returned_on).format("YYYY-MM-D")
                     td
                         a.button(href="/all_books/return_book/" + loan.book_id) Return Book
 

@@ -18,6 +18,8 @@ router.get('/', function (req, res) {
 router.post('/new', function(req, res){
     Book.create(req.body).then(function(){
         res.redirect("/all_books");
+    }).catch(Sequelize.ValidationError, function(error) {
+        res.status(400).json(error);
     });
 });
 

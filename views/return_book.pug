@@ -13,10 +13,10 @@ html
                 =loan.Patron.first_name + " " + loan.Patron.last_name
         p
             strong Loaned On:&nbsp;
-                =loan.loaned_on
+                =moment(loan.loaned_on).format("YYYY-MM-D")
         p
             strong Return By:&nbsp;
-                =loan.return_by
+                =moment(loan.return_by).format("YYYY-MM-D")
         form(action="/all_books/return_book/" + loan.book_id + "/1" + "?_method=PUT", method="post")
             p
                 label(for="returned_on")

@@ -56,9 +56,8 @@ router.post('/new', function(req, res){
 
 //create a brand new loan
 router.get('/new_loan', function(req, res) {
-    //TODO: Figure out why date isn't in proper format.
-    var loanedOn = moment().format('YYYY-MM-DD');
-    var returnDate = moment().add('7', 'days').format('YYYY-MM-DD');
+    var loanedOn = moment().format('YYYY-MM-D');
+    var returnDate = moment().add(7, 'days').format('YYYY-MM-D');
     Book.findAll().then(function(books){
         Patron.findAll().then(function(patrons){
             res.render('new_loan', {books: books, patrons: patrons, loanedOn: loanedOn, returnDate: returnDate})
