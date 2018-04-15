@@ -19,7 +19,6 @@ router.post('/new', function(req, res){
     Book.create(req.body).then(function(){
         res.redirect("/all_books");
     }).catch(function(error) {
-        console.log(error)
         if (error.name === "SequelizeValidationError"){
             res.render("new_book", {
                 title: req.body.title,
@@ -110,22 +109,35 @@ router.get('/book_detail/:id', function(req, res) {
             res.render('book_detail', {book: book, loans: loans})
         });
     });
+});
 
 //update book function
-    router.put('/book_detail/:id', function (req, res) {
-        Book.findById(req.params.id).then(function (book) {
-            return book.update(req.body);
-        }).then(function (book) {
+router.put('/book_detail/:id', function (req, res) {
+    Book.findById(req.params.id).then(function (book) {
+        return book.update(req.body);
+    }).then(function (book) {
+        Loan.findAll({
+            include: [
+                {model: Book, required: true},
+                {model: Patron, required: true}],
+            where: {book_id: book.id}
+        }).then(function (loans) {
             res.redirect('/all_books');
-        }).catch(function (err) {
-            // if validation error, re-render page with error messages
-            if (err.name === 'SequelizeValidationError') {
-                Book.findAll({
-                    include: [{model: Loan, include: [{model: Patron}]}],
-                    where: {id: req.params.id}
+        }).catch(function (error, loans) {
+            if (error.name === "SequelizeValidationError") {
+                res.render("book_detail", {
+                    book: book,
+                    loans: loans,
+                    title: req.body.title,
+                    errors: error.errors
                 })
+            } else {
+                throw error;
             }
+        }).catch(function (error) {
+            res.status(400).json(error);
         });
     });
 });
+
 module.exports = router;

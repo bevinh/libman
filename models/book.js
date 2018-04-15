@@ -15,8 +15,24 @@ module.exports = function(sequelize, DataTypes) {
             }
         }
     },
-    author: DataTypes.STRING,
-    genre: DataTypes.STRING,
+    author:  {
+        type: DataTypes.STRING,
+        allowNull: false,
+        validate: {
+            notEmpty: {
+                msg: "Please enter an author"
+            }
+        }
+    },
+    genre:  {
+        type: DataTypes.STRING,
+        allowNull: false,
+        validate: {
+            notEmpty: {
+                msg: "Please enter a genre"
+            }
+        }
+    },
     first_published: DataTypes.INTEGER
   },
       {
