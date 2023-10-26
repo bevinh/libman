@@ -9,8 +9,8 @@
     "method-override": "^2.3.10",
     "moment": "^2.18.1",
     "pug": "^2.0.0-rc.1",
-    "sequelize": "^3.30.4",
-    "sequelize-cli": "^2.7.0",
+    "sequelize": "^3.35.1",
+    "sequelize-cli": "^2.8.0",
     "sqlite3": "^3.1.8"
   },
   "devDependencies": {
